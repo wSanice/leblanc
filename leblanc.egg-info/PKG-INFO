@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: leblanc
+Version: 0.6.0
+Summary: A Python library to generate various synthetic DataFrames for different business sectors (Tech, Food, Finance, Apparel, forestry, etc.).
+Home-page: https://github.com/wSanice/leblanc
+Author: wSanice
+Author-email: wansanice@proton.me
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# leblanc: Sectorial Synthetic Data Generator
+
+## I. Overview
+
+**leblanc** is a modular Python library designed for the rapid generation of large-scale synthetic datasets across various business sectors. It is primarily built using **Pandas**, **NumPy**, and **Faker** to create realistic, structured DataFrames suitable for Data Science training, testing, and exploratory data analysis (EDA).
+
+The library supports generating sector-specific data, complete with domain logic (e.g., product recurrence in Health, climate impact in Agribusiness, risk in Financials).
+
+### Supported Sectors (Modules)
+
+| Module | Data Generated | Key Domain Variables |
+| :--- | :--- | :--- |
+| `tech` | Tech Sales | Unit Price, Quantity, Category |
+| `food` | Food & Beverages Sales | Expiration Date, Perishability |
+| `apparel` | Apparel & Fashion Sales | Size, Color, Return Flag |
+| `financial` | Financial Transactions | Interest Rate, Client Risk Level, Default Flag |
+| `health_beauty` | Health & Beauty Sales/Services | Recurrence Days, Sales Channel |
+| `agribusiness` | Agribusiness Records | Climate Condition, Area (Ha), Production Yield |
+| `forestry` | Forestry Inventory/Harvest | Planting Age, Management Type, Total Volume ($m^3$) |
+
+---
+
+## II. Installation
+
+leblanc is available on PyPI. Use `pip` to install the latest stable version:
+
+```bash
+pip install leblanc
+```
+## III. Basic Usage Example
+
+The library exposes individual generation functions directly from the main package. The `set_seed` utility is recommended for data reproducibility.
+
+```bash
+import pandas as pd
+from leblanc import generate_tech_sales, generate_agribusiness_records, set_seed
+
+# Ensure data is reproducible across environments
+set_seed(42)
+
+# 1. Generate Technology Sales Data
+df_tech_sales = generate_tech_sales(num_records=1000)
+print(" Technology Data Sample")
+print(df_tech_sales.head())
+
+# 2. Generate Agribusiness Records
+df_agro_records = generate_agribusiness_records(num_records=500)
+print("\n Agribusiness Data Sample")
+print(df_agro_records.head())
+
+```
+
+## IV. License
+
+This project is licensed under the Apache License, Version 2.0. See the LICENSE file for details.
+
+
+# 🇧🇷 leblanc: Gerador Setorial de Dados Sintéticos
+
+## I. Visão Geral
+
+**leblanc** é uma biblioteca Python modular projetada para a geração rápida de conjuntos de dados sintéticos de grande escala em diversos setores de negócios. É construída primariamente utilizando Pandas, NumPy e Faker para criar DataFrames estruturados e realistas, adequados para treinamento em Data Science, testes e análise exploratória de dados (AED).
+
+A biblioteca suporta a geração de dados específicos do domínio, completos com lógica de negócio (ex: recorrência de produto em Saúde, impacto climático em Agronegócios, risco em Finanças).
+
+Setores Suportados (Módulos)
+
+# leblanc: Gerador Setorial de Dados Sintéticos
+
+## I. Visão Geral
+
+**leblanc** é uma biblioteca Python modular projetada para a geração rápida de grandes volumes de dados sintéticos em diversos setores de negócios. Ela é construída principalmente com **Pandas**, **NumPy** e **Faker**, permitindo criar DataFrames estruturados e realistas, adequados para treinamento em Data Science, testes e análise exploratória de dados (AED).
+
+A biblioteca oferece geração de dados específica por setor, incluindo lógica de domínio (ex.: recorrência de produtos em Saúde, impacto climático em Agronegócios, risco em Finanças).
+
+### Setores Suportados (Módulos)
+
+| Módulo | Dados Gerados | Variáveis-Chave do Domínio |
+| :--- | :--- | :--- |
+| `tech` | Vendas de Tecnologia | Preço Unitário, Quantidade, Categoria |
+| `food` | Vendas de Alimentos e Bebidas | Data de Validade, Perecibilidade |
+| `apparel` | Vendas de Vestuário e Moda | Tamanho, Cor, Flag de Devolução |
+| `financial` | Transações Financeiras | Taxa de Juros, Nível de Risco do Cliente, Flag de Inadimplência |
+| `health_beauty` | Vendas/Serviços de Saúde e Beleza | Dias de Recorrência, Canal de Vendas |
+| `agribusiness` | Registros de Agronegócios | Condição Climática, Área (Ha), Produtividade |
+| `forestry` | Inventário/Colheita Florestal | Idade do Plantio, Tipo de Manejo, Volume Total (m³) |
+
+## II. Instalação
+
+leblanc está disponível no PyPI. Use o `pip` para instalar a versão estável mais recente:
+
+```bash
+pip install leblanc
+```
+
+## III. Exemplo de Uso Básico
+
+A biblioteca expõe funções de geração individuais diretamente do pacote principal. A função auxiliar `set_seed` é recomendada para garantir a reprodutibilidade dos dados.
+
+```bash
+import pandas as pd
+from leblanc import generate_tech_sales, generate_agribusiness_records, set_seed
+
+# Garante que os dados sejam reprodutíveis em todos os ambientes
+set_seed(42)
+
+# 1. Gera Dados de Vendas de Tecnologia
+df_vendas_tech = generate_tech_sales(num_records=1000)
+print("\n Amostra de Dados de Tecnologia")
+print(df_vendas_tech.head())
+
+# 2. Gera Registros de Agronegócios
+df_registros_agro = generate_agribusiness_records(num_records=500)
+print("\n Amostra de Dados de Agronegócios")
+print(df_registros_agro.head())
+```
+
+## IV. Licença
+
+Este projeto está licenciado sob a Apache License, Version 2.0. Consulte a [LICENSE](https://www.apache.org/licenses/LICENSE-2.0)
+ para obter detalhes.
+
