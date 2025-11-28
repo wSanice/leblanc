@@ -82,7 +82,7 @@ print(f"Missing values generated: {df_fin['contracted_value'].isnull().sum()}")
 
 This project is licensed under the Apache License, Version 2.0. See the [LICENSE](https://www.apache.org/licenses/LICENSE-2.0)  for details.
 
-#
+<br><br><br><br>
 
 # 🇧🇷 leblanc: Gerador Setorial de Dados Sintéticos
 
@@ -95,9 +95,9 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 
 **Design Orientado a Objetos:** Uso de Classes para maior controle.
 
-**Internacionalização (i18n):** Suporte nativo para Português do Brasil (pt_BR).
+**Internacionalização (i18n):** Suporte nativo para Português do Brasil (`pt_BR`).
 
-**Prática de Limpeza de Dados:** Suporte nativo para injeção de valores nulos (NaN).
+**Prática de Limpeza de Dados:** Suporte nativo para injeção de valores nulos (`NaN`).
 
 ### Setores Suportados (Classes)
 
