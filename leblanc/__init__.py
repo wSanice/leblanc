@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .tech import generate_tech_sales
-from .food import generate_food_sales
-from .apparel import generate_apparel_sales
-from .financial import generate_financial_transactions
-from .health_beauty import generate_health_beauty_sales
-from .agribusiness import generate_agribusiness_records
-from .forestry import generate_forestry_records
-from .utils import set_seed
+from .base import Leblanc
+from .agribusiness import Agribusiness
+from .tech import Tech
+from .food import Food
+from .apparel import Apparel
+from .financial import Financial
+from .health_beauty import HealthBeauty
+from .forestry import Forestry
 
-__version__ = "0.3.0"
+__version__ = "0.8.0"
