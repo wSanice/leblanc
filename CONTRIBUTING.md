@@ -7,7 +7,7 @@ First off, thank you for considering contributing to **leblanc**! It's people li
 1. **Fork the repository** on GitHub.
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/wSanice/leblanc.git
+   git clone https://github.com/YourFork/leblanc.git
    cd leblanc
    ```
 
