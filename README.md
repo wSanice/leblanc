@@ -2,8 +2,8 @@
   <img src="https://raw.githubusercontent.com/wSanice/leblanc/refs/heads/main/assets/leblanc.png" alt="Leblanc Banner" width="100%"/>
 </p>
 
-# leblanc: Sectorial Synthetic Data Generator
-
+# leblanc: Sectorial Synthetic Data Generator 
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/leblanc?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=RED&left_text=downloads)](https://pepy.tech/projects/leblanc)
 ## I. Overview
 
 **leblanc** is a modular Python library designed for Data Scientists to rapidly generate large-scale synthetic datasets across various business sectors. Built on top of **Pandas**, **NumPy**, and **Faker**, it creates realistic, structured DataFrames suitable for training, testing, and Exploratory Data Analysis (EDA).
